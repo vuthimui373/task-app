@@ -32,7 +32,40 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1976d2;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 1.5rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #eeeeee;
+  padding: 16px;
+}
+
+.content {
+  grid-area: content;
+  padding: 16px;
+  background-color: #fafafa;
 }
